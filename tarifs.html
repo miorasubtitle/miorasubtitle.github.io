@@ -1,69 +1,54 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Mes Tarifs - Mioramalala</title>
-    <style>
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            text-align: center; 
-            background-color: #f4f7f6; 
-            padding: 50px; 
-            color: #333;
-        }
-        h1 { color: #2c3e50; }
-        
-        /* Style du tableau pour qu'il soit "Pro" */
-        table { 
-            margin: 30px auto; 
-            border-collapse: collapse; 
-            width: 80%; 
-            background: white; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        th { background-color: #2c3e50; color: white; padding: 20px; }
-        td { padding: 15px; border-bottom: 1px solid #eee; }
-        
-        /* Rappel de ton orange de compétences */
-        .prix { color: #d35400; font-weight: bold; }
-
-        /* Style du bouton retour */
-        .bouton-retour {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 10px 20px;
-            background-color: #2c3e50;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: 0.3s;
-        }
-        .bouton-retour:hover { background-color: #d35400; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<nav class="barre-nav">
+    <a href="index.html">Accueil</a>
+    <a href="tarifs.html">Mes Tarifs</a>
+    <a href="contact.html">Contact</a> </nav>
     <h1>Mes Tarifs de Sous-titrage</h1>
     <p>Des tarifs adaptés à la complexité de vos fichiers.</p>
 
     <table>
+       <thead>
         <tr>
-            <th>Type de Service</th>
+            <th>Service</th>
             <th>Format</th>
-            <th>Tarif / min</th>
-        </tr>
+            <th>Prix / minute</th>
+            <th>Délai estimé</th> </tr>
+    </thead>
+    <tbody>
         <tr>
-            <td>Sous-titrage simple (SRT)</td>
+            <td>Sous-titrage Standard</td>
             <td>POP</td>
-            <td class="prix">3 €</td>
+            <td>3 €</td>
+            <td>24h - 48h</td>
         </tr>
         <tr>
-            <td>Sous-titrage complexe</td>
-            <td>Roll-up / Broadcast</td>
-            <td class="prix">5 €</td>
+            <td>Sous-titrage Dynamique</td>
+            <td>Roll-up</td>
+            <td>5 €</td>
+            <td>48h - 72h</td>
         </tr>
+        <tr>
+            <td>Transcription Seule</td>
+            <td>Texte / Word</td>d&<td>2 €</td>
+            <td>24h</td>
+        </tr>
+    </tbody>
     </table>
 
     <a href="index.html" class="bouton-retour">⬅ Retour à l'accueil</a>
+<footer class="pied-de-page">
+    <p>&copy; 2026 Mioramalala - Sous-titrage Professionnel</p>
+    <div class="reseaux-sociaux">
+        <a href="#">LinkedIn</a> | 
+        <a href="#">Facebook</a> | 
+        <a href="mailto:ton-email@gmail.com">Email</a>
+    </div>
+</footer>
 </body>
 </html>
+
