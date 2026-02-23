@@ -1,0 +1,306 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+background-color: #f4f7f6; /* Un gris-bleu très très pâle, plus reposant */
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police plus moderne */
+text-align: center;
+color: #333;
+line-height: 1.6; /* Plus d'espace entre les lignes pour le confort */
+}
+h1 {
+color: #2c3e50;
+margin-top: 10px;
+letter-spacing: 1px; /* Espace un peu les lettres du titre */
+}
+.ma-photo {
+width: 160px;
+height: 160px;
+border-radius: 50%;
+border: 4px solid white; /* Contour blanc pour faire ressortir la photo */
+box-shadow: 0px 4px 15px rgba(0,0,0,0.2); /* Ombre portée douce */
+margin-top: 30px;
+object-fit: cover;
+}
+.competence {
+color: #d35400; /* Un orange un peu plus brique, plus pro */
+background-color: #fff3e0; /* Un léger fond derrière les mots clés */
+padding: 2px 6px;
+border-radius: 4px;
+}
+.bouton-contact {
+background-color: #2c3e50;
+color: white;
+padding: 12px 30px;
+text-decoration: none;
+border-radius: 25px; /* Bouton plus arrondi (style pilule) */
+font-weight: bold;
+box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+transition: 0.3s; /* Rend le changement de couleur fluide ! */
+}
+.bouton-contact:hover {
+background-color: #d35400;
+transform: scale(1.05); /* Le bouton grossit très légèrement au survol */
+}
+h2 { color : #d35400; /* Un orange un peu plus brique, plus pro */ }
+ul {
+list-style-position: inside; /* Force la puce à entrer à l'intérieur du bloc de texte */
+padding: 0; /* Enlève la marge invisible à gauche */
+display: inline-block; /* Réduit la largeur de la liste au strict nécessaire */
+text-align: left; /* Aligne le texte à gauche à l'intérieur de ce petit bloc */
+}
+/* On décore le bloc qui contient l'avis */
+.carte-avis {
+background-color: white; /* Fond blanc pour la clarté */
+max-width: 600px; /* Pour que le texte ne soit pas trop large */
+margin: 20px auto; /* Centre le bloc sur la page */
+padding: 20px; /* Espace à l'intérieur du bloc */
+border-left: 6px solid #d35400; /* La fameuse barre orange à gauche */
+box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Une petite ombre pour donner du relief */
+border-radius: 0 10px 10px 0; /* Arrondit seulement les coins de droite */
+font-style: italic; /* Met le texte en italique */
+}
+/* On stylise le nom du client */
+.carte-avis span {
+display: block; /* Met le nom sur une nouvelle ligne */
+margin-top: 10px; /* Espace au-dessus du nom */
+font-weight: bold; /* Nom en gras */
+color: #2c3e50; /* Couleur bleu sombre comme tes titres */
+font-style: normal; /* Le nom n'est pas en italique */
+}
+.calculateur {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 500px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.calculateur input, .calculateur select {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.calculateur button {
+    background-color: #d35400;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.calculateur button:hover {
+    background-color: #e67e22; /* Le bouton change de couleur au survol ! */
+}
+
+#resultat {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 20px;
+}
+/* Quand l'écran fait moins de 600px (Mobile) */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px; /* Moins d'espace sur les côtés */
+    }
+
+    h1 {
+        font-size: 1.5em; /* On réduit un peu la taille du titre */
+    }
+
+    .calculateur, .carte-avis {
+        width: 95%; /* On prend presque toute la largeur disponible */
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    table {
+        display: block; /* On force le tableau à bouger */
+        overflow-x: auto; /* Permet de glisser le tableau avec le doigt s'il est trop large */
+    }
+}
+/* --- PATCH RESPONSIVE --- */
+@media (max-width: 600px) {
+    /* Aligne les éléments du calculateur verticalement */
+    .calculator-container, .form-group { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Force les inputs et le bouton à prendre plus de largeur sur mobile */
+    input, select, button {
+        width: 90% !important;
+        max-width: 300px;
+    }
+
+    /* Ajuste la taille du texte pour les petits écrans */
+    h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    /* Le bloc de témoignage s'adapte aussi */
+    blockquote {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+/* Animation pour les cartes de services */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* La carte monte un peu */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* L'ombre devient plus forte */
+    background-color: #fff3e0; /* Un léger changement de couleur */
+}
+body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            text-align: center; 
+            background-color: #f4f7f6; 
+            padding: 50px; 
+            color: #333;
+        }
+        h1 { color: #2c3e50; }
+        
+        /* Style du tableau pour qu'il soit "Pro" */
+        table { 
+            margin: 30px auto; 
+            border-collapse: collapse; 
+            width: 80%; 
+            background: white; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+    padding: 15px 20px; /* Plus d'espace sur les côtés */
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+/* On met en gras la première colonne (les services) */
+td:first-child {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* On change la couleur de la colonne Prix pour la faire ressortir */
+td:nth-child(3) {
+    color: #d35400;
+    font-weight: bold;
+}
+        
+        /* Rappel de ton orange de compétences */
+        .prix { color: #d35400; font-weight: bold; }
+
+        /* Style du bouton retour */
+        .bouton-retour {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+        .bouton-retour:hover { background-color: #d35400; }
+/* Style de la barre de navigation */
+.barre-nav {
+    background-color: #2c3e50;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.barre-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.barre-nav a:hover {
+    color: #d35400; /* Ton orange fétiche */
+}
+/* Style de la barre de navigation */
+.barre-nav {
+    background-color: #2c3e50;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.barre-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.barre-nav a:hover {
+    color: #d35400; /* Ton orange fétiche */
+}
+/* Pour mettre les étiquettes et les champs l'un au-dessus de l'autre */
+label {
+    display: block; /* Force le retour à la ligne */
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    display: block; /* Force le retour à la ligne */
+    width: 100%;    /* Prend toute la largeur disponible */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Pour que le bouton ne soit pas collé au message */
+.bouton-retour {
+    margin-top: 20px;
+    cursor: pointer;
+}
+/* --- ADAPTATION POUR MOBILES --- */
+
+/* Si l'écran fait moins de 600 pixels de large (comme un smartphone) */
+@media screen and (max-width: 600px) {
+    
+    .barre-nav {
+        display: flex;
+        flex-direction: column; /* Les boutons du menu s'empilent au lieu d'être côte à côte */
+        text-align: center;
+    }
+
+    .barre-nav a {
+        margin: 10px 0; /* Plus d'espace pour cliquer avec le doigt */
+    }
+
+    h1 {
+        font-size: 24px; /* On réduit un peu la taille du titre */
+    }
+
+    table {
+        font-size: 14px; /* On réduit la taille du texte dans le tableau */
+    }
+
+    .formulaire-container {
+        width: 95%; /* Le formulaire prend presque toute la largeur sur mobile */
+        padding: 15px;
+    }
+}
