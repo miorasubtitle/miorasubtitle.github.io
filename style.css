@@ -318,3 +318,33 @@ input, textarea {
     width: 100%;
     height: 100%;
 }
+.ma-specialite {
+    font-style: italic;      /* Met le texte en italique */
+    color: #3498db;         /* Un joli bleu (tu peux changer !) */
+    font-size: 1.1rem;      /* Agrandit un tout petit peu la taille */
+    margin-top: -10px;      /* Rapproche la phrase du titre h2 */
+}
+/* Style du bouton lui-même */
+.bouton-theme {
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: white;
+    margin: 10px;
+}
+
+/* Les couleurs quand le mode sombre est activé */
+body.dark-mode {
+    background-color: #1a1a1a; /* Fond presque noir */
+    color: #f4f4f4;            /* Texte blanc cassé */
+}
+
+body.dark-mode .barre-nav {
+    background-color: #000;    /* Barre nav encore plus sombre */
+}
+
+body.dark-mode .calculateur, body.dark-mode .carte-avis {
+    background-color: #2d2d2d; /* Blocs gris foncé */
+    color: white;
+}
