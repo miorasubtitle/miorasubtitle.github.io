@@ -16,3 +16,16 @@ if (formulaire) {
         this.reset();
     });
 }
+const btn = document.getElementById("theme-toggle");
+
+btn.addEventListener("click", function() {
+  // On "bascule" la classe dark-mode sur le body
+  document.body.classList.toggle("dark-mode");
+  
+  // On change le texte du bouton selon le mode
+  if (document.body.classList.contains("dark-mode")) {
+    btn.textContent = "☀️ Mode Clair";
+  } else {
+    btn.textContent = "🌓 Mode Sombre";
+  }
+});
