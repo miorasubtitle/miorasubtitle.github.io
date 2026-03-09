@@ -348,3 +348,19 @@ body.dark-mode .calculateur, body.dark-mode .carte-avis {
     background-color: #2d2d2d; /* Blocs gris foncé */
     color: white;
 }
+/* 1. On définit l'animation */
+@keyframes apparitionDouce {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Le texte monte un peu en apparaissant */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. On l'applique aux éléments que l'on veut animer */
+header, main, section {
+    animation: apparitionDouce 1.2s ease-out;
+}
