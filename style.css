@@ -364,3 +364,52 @@ body.dark-mode .calculateur, body.dark-mode .carte-avis {
 header, main, section {
     animation: apparitionDouce 1.2s ease-out;
 }
+/* Section Témoignages */
+#temoignages {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#temoignages h2 {
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.grille-avis {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap; /* Pour que les cartes passent les unes sous les autres sur mobile */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.carte-avis {
+    background: #fdfdfd;
+    padding: 25px;
+    border-top: 4px solid #d35400; /* Rappel de ta couleur principale */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    transition: transform 0.3s ease;
+}
+
+.carte-avis:hover {
+    transform: translateY(-5px); /* Petit effet de lévitation au survol */
+}
+
+.carte-avis p {
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+}
+
+.carte-avis strong {
+    display: block;
+    margin-top: 20px;
+    color: #2c3e50;
+    font-size: 0.9em;
+}
